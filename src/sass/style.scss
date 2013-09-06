@@ -1,0 +1,62 @@
+/**
+* HTML/CSS/JS Template
+*
+* @info		Baseline and 320px styling
+* @version	0.3.2
+* @author	Jasal Vadgama - http://blacklabelcreative.com/
+**/
+
+/**
+* Imports
+**/
+/** SASS **/
+@import 'src/sass/partials/_variables.scss';
+/** RESET **/
+@import 'src/sass/reset.scss';
+
+/**
+* General
+**/
+body {
+	background: #fff;
+	color: #121212;
+	font: 14px/1.2em Helvetica, Arial, sans-serif;
+	/* stop font size scalling on orientation change - ADD FULL FIX */
+	-webkit-text-size-adjust: 100%;
+}
+section {
+	margin-bottom: $MARGIN_BOTTOM * 2;
+}
+h1 {
+	margin-bottom: $MARGIN_BOTTOM;
+	font-size: 26px;
+	line-height: 1.2em;
+}
+h2 {
+	margin-bottom: $MARGIN_BOTTOM / 2;
+	font-size: 20px;
+	line-height: 1.2em;
+}
+h3 {
+	margin-bottom: $MARGIN_BOTTOM;
+}
+p,
+ul {
+	margin-bottom: $MARGIN_BOTTOM;
+}
+li {
+	margin: 0 0 5px 40px;
+}
+
+/** SMALL SCREEN **/
+@media screen and (min-width: 479px) {
+	@import 'src/sass/style_small.scss';
+}
+/** MEDIUM SCREEN **/
+@media screen and (min-width: 767px) {
+	@import 'src/sass/style_medium.scss';
+}
+/** LARGE SCREEN **/
+@media screen and (min-width: 959px) {
+	@import 'src/sass/style_large.scss';
+}
