@@ -117,21 +117,25 @@ viewer = io
     .of('/view')
     .on('connection', function(socket) {
         console.log("viewer connected");
+
+        // when the user disconnects
+        socket.on('disconnect', function() {
+            console.log("viewer disconnected");
+        });
     });
 
 artist = io
     .of('/draw')
     .on('connection', function(socket) {
         console.log("artist connected");
-    });
 
-// On new connection
-/*io.sockets.on('connection', function(socket) {
-    // news emitter
-    socket.emit('news', { hello: 'world' });
+        // when the user disconnects
+        socket.on('disconnect', function() {
+            console.log("artist disconnected");
+        });
 
-    // my other event listener
-    socket.on('my other event', function(data) {
-        console.log(data);
+        // when the user draws
+        socket.on('draw', function(data) {
+            console.log(viewer);
+        });
     });
-});*/

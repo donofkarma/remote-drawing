@@ -33,6 +33,35 @@ Template = (function() {
                 artist.on('connect', function() {
                     console.log("artist connected");
                 });
+
+                /*$content.find('#drawArea').on('click', function(e) {
+                    var $drawAreaOffset = $('#drawArea').offset();
+
+                    artist.emit('draw', {
+                        xPos: e.pageX - $drawAreaOffset.left,
+                        yPos: e.pageY - $drawAreaOffset.top
+                    });
+                });*/
+                $content.find('#drawArea').on('mousedown', function(e) {
+                    var $drawAreaOffset = $('#drawArea').offset();
+
+                    // send the initial position
+                    artist.emit('draw', {
+                        xPos: e.pageX - $drawAreaOffset.left,
+                        yPos: e.pageY - $drawAreaOffset.top
+                    });
+
+                    $content.find('#drawArea').on('mousemove', function(e) {
+                        artist.emit('draw', {
+                            xPos: e.pageX - $drawAreaOffset.left,
+                            yPos: e.pageY - $drawAreaOffset.top
+                        });
+                    });
+                });
+
+                $content.find('#drawArea').on('mouseup', function(e) {
+                    $content.find('#drawArea').off('mousemove');
+                });
             }
         },
         pageInit: function() {
