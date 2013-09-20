@@ -32,20 +32,18 @@ h1 {
 	font-size: 26px;
 	line-height: 1.2em;
 }
-h2 {
-	margin-bottom: $MARGIN_BOTTOM / 2;
-	font-size: 20px;
-	line-height: 1.2em;
-}
-h3 {
+p {
 	margin-bottom: $MARGIN_BOTTOM;
 }
-p,
-ul {
-	margin-bottom: $MARGIN_BOTTOM;
-}
-li {
-	margin: 0 0 5px 40px;
+
+/**
+* Artist Page
+**/
+/** Draw area **/
+#drawArea {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 /** SMALL SCREEN **/

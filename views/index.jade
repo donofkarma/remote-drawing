@@ -1,13 +1,7 @@
 extends layout
 
 block content
-    #pageWrapper
-        header#header
-            h1 Socket.io Experiments
+    #pageWrapper.viewer
+        canvas#drawArea
 
-        #content.viewer
-            p See what people are drawing...
-
-            #drawArea
-
-        footer#footer
+        a.draw-tab(href = "#") Draw

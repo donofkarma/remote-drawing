@@ -1,13 +1,7 @@
 extends layout
 
 block content
-    #pageWrapper
-        header#header
-            h1 Socket.io Experiments
+    #pageWrapper.artist
+        canvas#drawArea
 
-        #content.artist
-            h2 Draw stuff...
-
-            #drawArea
-
-        footer#footer
+        a.home-tab(href = "#") Home

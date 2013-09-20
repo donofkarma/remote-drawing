@@ -136,6 +136,6 @@ artist = io
 
         // when the user draws
         socket.on('draw', function(data) {
-            console.log(viewer);
+            viewer.emit('draw', { pos: data });
         });
     });
