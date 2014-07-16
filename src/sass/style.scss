@@ -1,60 +1,12 @@
-/**
-* HTML/CSS/JS Template
-*
-* @info		Baseline and 320px styling
-* @version	0.3.2
-* @author	Jasal Vadgama - http://blacklabelcreative.com/
-**/
+// Global setup
+@import "_setup/variables";
+@import "_setup/mixins";
+@import "_setup/reset";
+@import "_setup/global";
+@import "_setup/grid";
 
-/**
-* Imports
-**/
-/** SASS **/
-@import 'src/sass/partials/_variables.scss';
-/** RESET **/
-@import 'src/sass/reset.scss';
+// Components
+@import "_components/header";
+@import "_components/footer";
 
-/**
-* General
-**/
-body {
-	background: #fff;
-	color: #121212;
-	font: 14px/1.2em Helvetica, Arial, sans-serif;
-	/* stop font size scalling on orientation change - ADD FULL FIX */
-	-webkit-text-size-adjust: 100%;
-}
-section {
-	margin-bottom: $MARGIN_BOTTOM * 2;
-}
-h1 {
-	margin-bottom: $MARGIN_BOTTOM;
-	font-size: 26px;
-	line-height: 1.2em;
-}
-p {
-	margin-bottom: $MARGIN_BOTTOM;
-}
-
-/**
-* Artist Page
-**/
-/** Draw area **/
-#drawArea {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-/** SMALL SCREEN **/
-@media screen and (min-width: 479px) {
-	@import 'src/sass/style_small.scss';
-}
-/** MEDIUM SCREEN **/
-@media screen and (min-width: 767px) {
-	@import 'src/sass/style_medium.scss';
-}
-/** LARGE SCREEN **/
-@media screen and (min-width: 959px) {
-	@import 'src/sass/style_large.scss';
-}
+// Pages
